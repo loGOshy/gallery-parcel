@@ -2,10 +2,11 @@
   "name": "gallery-parcel",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.html",
+  "main": "./src/index.html",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir docs",
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,8 @@
   "homepage": "https://github.com/loGOshy/gallery-parcel#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "push-dir": "^0.4.1"
   }
 }
